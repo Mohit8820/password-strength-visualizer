@@ -11,6 +11,17 @@
       href="./images/favicon.ico?"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="images/damaged.png" as="image" />
+    <link rel="preload" href="images/base2.png" as="image" />
+    <link rel="preload" href="images/ssj.png" as="image" />
+    <link rel="preload" href="images/ssj2.png" as="image" />
+    <link rel="preload" href="images/ssj3.png" as="image" />
+    <link rel="preload" href="images/ssjb.png" as="image" />
+    <link rel="preload" href="images/ssjg.png" as="image" />
+    <link rel="preload" href="images/ssjbkk.png" as="image" />
+    <link rel="preload" href="images/ui.png" as="image" />
+    <link rel="preload" href="images/ui2.png" as="image" />
+
     <title>Password-strength-checker</title>
   </head>
   <body>
@@ -163,6 +174,12 @@
         </li>
       </ul>
     </form>
+    <script>
+      document.documentElement.style.setProperty(
+        "--original-viewport-height",
+        window.innerHeight + "px"
+      );
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
