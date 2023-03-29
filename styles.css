@@ -1,16 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "optima", "Courier New", Courier, monospace;
+}
+body {
+  background: url("/images/bg.png") no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255) 50%,
+    rgba(250, 252, 255, 0.9) 100%
+  ); */
+  background: radial-gradient(
+    76.06% 76.06% at 50.13% 12.42%,
+    #ffffff 0%,
+    rgba(255, 255, 255, 0.9) 80.04%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  z-index: -1;
+}
 #goku {
-  border: 0.01rem solid black;
+  /* border: 0.01rem solid black; */
+  /* background-color: #000000; */
   width: 125px;
   height: 220px;
   background-repeat: no-repeat;
   background-size: 260px 220px;
   animation: stand 0.8s steps(2) infinite;
+  margin: 4rem;
+}
+.damaged {
+  background-image: url("images/damaged.png");
 }
 .base {
   background-image: url("images/base2.png");
@@ -18,8 +52,30 @@ form {
 .ssj {
   background-image: url("images/ssj.png");
 }
+.ssj2 {
+  background-image: url("images/ssj2.png");
+  transform: scale(1.5);
+}
 .ssj3 {
   background-image: url("images/ssj3.png");
+}
+.ssjg {
+  background-image: url("images/ssjg.png");
+}
+.ssjb {
+  background-image: url("images/ssjb.png");
+}
+.ssjbkk {
+  background-image: url("images/ssjbkk.png");
+  transform: scale(1.5);
+}
+.ui {
+  background-image: url("images/ui.png");
+}
+.ui2 {
+  background-image: url("images/ui2.png");
+  transform: scale(1.6);
+  z-index: 0;
 }
 @keyframes stand {
   from {
@@ -28,4 +84,40 @@ form {
   to {
     background-position: -255px;
   }
+}
+
+input {
+  outline-color: #f80;
+  border: 0.2rem solid #f80;
+  width: 70vw;
+  max-width: 20rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+}
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.no {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: red;
+}
+.yes {
+  width: 1.3rem;
+  height: 1.3rem;
+  fill: rgb(132, 220, 2);
+  display: none;
+  /* margin-bottom: 0.2rem; */
 }

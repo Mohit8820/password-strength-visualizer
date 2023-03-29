@@ -4,31 +4,272 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="./images/favicon.ico?"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
+    <title>Password-strength-checker</title>
   </head>
   <body>
+    <div class="bg"></div>
     <form action="" name="checker">
-      <div class="" id="goku"></div>
-      <input type="text" id="pwd" name="pwd" onkeyup="change(this.value)" />
-      <button>a</button>
+      <div class="damaged" id="goku"></div>
+      <input
+        type="text"
+        id="pwd"
+        name="pwd"
+        onkeyup="change(this.value)"
+        onkeypress="return event.charCode != 32"
+      />
+      <ul>
+        <li>
+          At least 12 characters long
+
+          <div>
+            <svg
+              class="yes"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"
+              />
+            </svg>
+            <svg
+              class="no"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5 15.538l-3.592-3.548 3.546-3.587-1.416-1.403-3.545 3.589-3.588-3.543-1.405 1.405 3.593 3.552-3.547 3.592 1.405 1.405 3.555-3.596 3.591 3.55 1.403-1.416z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li>
+          Includes uppercase letter
+          <div>
+            <svg
+              class="yes"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"
+              />
+            </svg>
+            <svg
+              class="no"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5 15.538l-3.592-3.548 3.546-3.587-1.416-1.403-3.545 3.589-3.588-3.543-1.405 1.405 3.593 3.552-3.547 3.592 1.405 1.405 3.555-3.596 3.591 3.55 1.403-1.416z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li>
+          Includes lowercase letter
+          <div>
+            <svg
+              class="yes"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"
+              />
+            </svg>
+            <svg
+              class="no"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5 15.538l-3.592-3.548 3.546-3.587-1.416-1.403-3.545 3.589-3.588-3.543-1.405 1.405 3.593 3.552-3.547 3.592 1.405 1.405 3.555-3.596 3.591 3.55 1.403-1.416z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li>
+          Includes number
+          <div>
+            <svg
+              class="yes"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"
+              />
+            </svg>
+            <svg
+              class="no"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5 15.538l-3.592-3.548 3.546-3.587-1.416-1.403-3.545 3.589-3.588-3.543-1.405 1.405 3.593 3.552-3.547 3.592 1.405 1.405 3.555-3.596 3.591 3.55 1.403-1.416z"
+              />
+            </svg>
+          </div>
+        </li>
+        <li>
+          Includes special symbol
+          <div>
+            <svg
+              class="yes"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-1.959 17l-4.5-4.319 1.395-1.435 3.08 2.937 7.021-7.183 1.422 1.409-8.418 8.591z"
+              />
+            </svg>
+            <svg
+              class="no"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm5 15.538l-3.592-3.548 3.546-3.587-1.416-1.403-3.545 3.589-3.588-3.543-1.405 1.405 3.593 3.552-3.547 3.592 1.405 1.405 3.555-3.596 3.591 3.55 1.403-1.416z"
+              />
+            </svg>
+          </div>
+        </li>
+      </ul>
     </form>
     <script>
       var goku = document.getElementById("goku");
+      var no = document.getElementsByClassName("no");
+      var yes = document.getElementsByClassName("yes");
       var pwd = document.checker.pwd;
-      console.log(pwd.value);
+      pwd.focus();
+
+      function hasNumber(myString) {
+        return /\d/.test(myString);
+      }
+      var spcharCheck = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+      function hasLowerCase(str) {
+        return str.toUpperCase() != str;
+      }
+      function hasUppercase(str) {
+        return /[A-Z]/.test(str);
+      }
+
+      function conv(bool) {
+        if (bool) return 1;
+        else return 0;
+      }
+
       function change(val) {
-        if (val.length <= 3) {
+        console.log(pwd.value.length);
+
+        if (val.length >= 12) {
+          no[0].style.display = "none";
+          yes[0].style.display = "block";
+        } else {
+          yes[0].style.display = "none";
+          no[0].style.display = "block";
+        }
+        if (hasUppercase(val)) {
+          no[1].style.display = "none";
+          yes[1].style.display = "block";
+        } else {
+          yes[1].style.display = "none";
+          no[1].style.display = "block";
+        }
+        if (hasLowerCase(val)) {
+          no[2].style.display = "none";
+          yes[2].style.display = "block";
+        } else {
+          yes[2].style.display = "none";
+          no[2].style.display = "block";
+        }
+        if (hasNumber(val)) {
+          no[3].style.display = "none";
+          yes[3].style.display = "block";
+        } else {
+          yes[3].style.display = "none";
+          no[3].style.display = "block";
+        }
+        if (spcharCheck.test(val)) {
+          no[4].style.display = "none";
+          yes[4].style.display = "block";
+        } else {
+          yes[4].style.display = "none";
+          no[4].style.display = "block";
+        }
+
+        var criterias =
+          conv(hasNumber(val)) +
+          conv(spcharCheck.test(val)) +
+          conv(hasLowerCase(val)) +
+          conv(hasUppercase(val));
+
+        if (val.length == 0) {
+          goku.className = "";
+          goku.classList.add("damaged");
+        }
+        if (val.length < 2 && val.length > 0) {
           goku.className = "";
           goku.classList.add("base");
         }
-        if (val.length > 3 && val.length <= 6) {
+        if (val.length >= 2) {
           goku.className = "";
           goku.classList.add("ssj");
         }
-        if (val.length > 6) {
+        if (val.length >= 4) {
+          goku.className = "";
+          goku.classList.add("ssj2");
+        }
+        if (val.length >= 6) {
           goku.className = "";
           goku.classList.add("ssj3");
+        }
+        if (val.length >= 8 && criterias > 1) {
+          goku.className = "";
+          goku.classList.add("ssjg");
+        }
+        if (val.length >= 10 && criterias > 2) {
+          goku.className = "";
+          goku.classList.add("ssjb");
+        }
+        if (val.length >= 11 && criterias > 2) {
+          goku.className = "";
+          goku.classList.add("ssjbkk");
+        }
+        if (val.length >= 12 && criterias > 3) {
+          goku.className = "";
+          goku.classList.add("ui");
+        }
+        if (val.length > 12 && criterias > 3) {
+          goku.className = "";
+          goku.classList.add("ui2");
         }
       }
     </script>
