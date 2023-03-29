@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" name="checker">
+      <div class="" id="goku"></div>
+      <input type="text" id="pwd" name="pwd" onkeyup="change(this.value)" />
+      <button>a</button>
+    </form>
+    <script>
+      var goku = document.getElementById("goku");
+      var pwd = document.checker.pwd;
+      console.log(pwd.value);
+      function change(val) {
+        if (val.length <= 3) {
+          goku.className = "";
+          goku.classList.add("base");
+        }
+        if (val.length > 3 && val.length <= 6) {
+          goku.className = "";
+          goku.classList.add("ssj");
+        }
+        if (val.length > 6) {
+          goku.className = "";
+          goku.classList.add("ssj3");
+        }
+      }
+    </script>
+  </body>
+</html>
