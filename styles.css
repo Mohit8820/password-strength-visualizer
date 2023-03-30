@@ -8,14 +8,14 @@ body {
   background: url("/images/bg.png") no-repeat;
   height: 100vh;
   background-size: cover;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .bg {
   position: absolute;
@@ -97,7 +97,7 @@ form {
 .ui2 {
   background-image: url("images/ui2.png");
   background-size: 262px auto;
-  transform: scale(3.2) translate(4%, -12%);
+  transform: scale(3.2) translate(2%, -12%);
   z-index: 0;
 }
 @keyframes stand {
@@ -147,6 +147,18 @@ li div {
 @media (max-width: 500px) {
   body {
     min-height: var(--original-viewport-height);
+    animation: slide 500s linear infinite;
+  }
+  @keyframes slide {
+    0% {
+      background-position: 0px;
+    }
+    50% {
+      background-position: -700px;
+    }
+    100% {
+      background-position: 0px;
+    }
   }
   .bg {
     min-height: var(--original-viewport-height);
