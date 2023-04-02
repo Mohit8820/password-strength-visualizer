@@ -1,6 +1,3 @@
-var audio = document.getElementById("myaudio");
-audio.volume = 0.2;
-
 var goku = document.getElementById("goku");
 var no = document.getElementsByClassName("no");
 var yes = document.getElementsByClassName("yes");

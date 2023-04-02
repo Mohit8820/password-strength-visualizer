@@ -21,6 +21,7 @@
     <link rel="preload" href="images/ssjbkk.png" as="image" />
     <link rel="preload" href="images/ui.png" as="image" />
     <link rel="preload" href="images/ui2.png" as="image" />
+    <link rel="preload" href="dbz.mp3" as="mp3" />
 
     <title>Password-strength-checker</title>
   </head>
@@ -174,15 +175,26 @@
         </li>
       </ul>
     </form>
-    <audio autoplay loop id="myaudio">
-      <source src="dbz.mp3" type="audio/mp3" />
-      Your browser does not support the audio element.
-    </audio>
+
+    <audio
+      src="dbz.mp3"
+      id="myaudio"
+      loop="loop"
+      controls
+      muted="muted"
+    ></audio>
     <script>
       document.documentElement.style.setProperty(
         "--original-viewport-height",
         window.innerHeight + "px"
       );
+      var audio = document.getElementById("myaudio");
+      audio.volume = 0.2;
+      audio.play();
+      document.getElementById("pwd").click();
+      window.onload = function () {
+        document.getElementById("myaudio").play();
+      };
     </script>
     <script src="script.js"></script>
   </body>
