@@ -144,6 +144,19 @@ li div {
   display: none;
   /* margin-bottom: 0.2rem; */
 }
+#play {
+  display: none;
+  margin: 0.1rem -0.3rem 0 0;
+  fill: #f80;
+}
+#pause {
+  fill: #f80;
+}
+.audio {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.8rem;
+}
 @media (max-width: 500px) {
   body {
     min-height: var(--original-viewport-height);
